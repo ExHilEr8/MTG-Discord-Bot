@@ -1,0 +1,16 @@
+create_table = """
+    CREATE TABLE cards (
+        card_id BINARY(16) NOT NULL DEFAULT (UUID_TO_BIN(UUID())),
+        card_name VARCHAR(141) NOT NULL,
+        card_price SMALLINT UNSIGNED,
+        card_colour VARCHAR(5),
+        card_image_filename TEXT,
+        card_shop_quantity TINYINT UNSIGNED NOT NULL,
+        card_exists_in_shop BOOL NOT NULL,
+        card_is_reserved BOOL,
+        card_reserved_to_user VARCHAR(50),
+        card_officialmtg_id TEXT,
+        card_mtgset VARCHAR(3)
+    )
+"""
+
